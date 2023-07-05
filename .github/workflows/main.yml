@@ -34,7 +34,7 @@ jobs:
           name: Build and Push Docker Image
           uses: mr-smithers-excellent/docker-build-push@v4
           with:
-              image: nanajanashia/demo-app
+              image: sarangp007/gitops
               registry: docker.io
               username: sarangp007
               password: timers123
