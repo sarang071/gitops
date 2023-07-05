@@ -23,7 +23,7 @@ jobs:
         with:
           context: .
           load: true
-          tags: gitpos:latest
+#           tags: gitpos:latest
 #       -
 #         name: Inspect
 #         run: |
