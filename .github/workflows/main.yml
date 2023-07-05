@@ -23,4 +23,5 @@ jobs:
         with:
           context: .
           load: true
-          tags: gitops:latest
+          push: true
+#           tags: gitops:latest
