@@ -19,12 +19,11 @@ jobs:
           password: timers123
       -
         name: Build
-        uses: docker/build-push-action@v4
+        uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          context: .
-          load: true
-#           tags: gitpos:latest
-#       -
+          image: sarangp007/gitops
+          registry: docker.io
+    #       -
 #         name: Inspect
 #         run: |
 #           docker image inspect gitops:latest
