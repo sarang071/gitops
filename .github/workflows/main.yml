@@ -27,5 +27,5 @@ jobs:
       -
         name: Inspect
         run: |
-          docker image inspect sarangp007/gitops:latest
+          docker image inspect gitops:latest
         
