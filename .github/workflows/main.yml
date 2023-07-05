@@ -24,8 +24,8 @@ jobs:
           context: .
           load: true
           tags: gitpos:latest
-      -
-        name: Inspect
-        run: |
-          docker image inspect gitops:latest
+#       -
+#         name: Inspect
+#         run: |
+#           docker image inspect gitops:latest
         
