@@ -31,11 +31,11 @@ jobs:
             version=${{ steps.tag.outputs.tag }}
           tags: ${{ secrets.ACR_ENDPOINT }}/${{ env.IMAGE_NAME }}:${{ github.run_attempt }}
      
-      - uses: azure/login@v1
+      - name: Azure login
+        id: login
+        uses: azure/login@v1.4.3
         with:
-          client-id: 5c023096-5c14-43b1-acae-f0f22f115f56
-          tenant-id: a787b852-29bf-4164-add5-7d55cac58f45
-          subscription-id: 0db1b169-34da-432c-98d4-2db3188443a7
+          creds: t1K8Q~yxmuCx~ziF1t5SrM~zuhtnS_7jdY2FdcGd
   
       - name: 'Run Azure CLI commands'
         run: |
