@@ -9,8 +9,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN go mod download && \
-    CGO_ENABLED=0 go build -ldflags="-X main.Version=${version}" -o departments-api
+# RUN go mod download && \
+#     CGO_ENABLED=0 go build -ldflags="-X main.Version=${version}" -o departments-api
 
 FROM scratch
 
