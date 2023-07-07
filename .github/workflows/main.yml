@@ -30,5 +30,7 @@ jobs:
           build-args: |
             version=${{ steps.tag.outputs.tag }}
           tags: ${{ secrets.ACR_ENDPOINT }}/${{ env.IMAGE_NAME }}:${{ github.run_attempt }}
-      - name: AZ Login
+      -
+        name: AZ Login
+        uses: azure/login@v1
         run: az login -u 5c023096-5c14-43b1-acae-f0f22f115f56 -p grY8Q~PDZ71PaveGw448ZbKhGzCHvja4x~Jtla5E
