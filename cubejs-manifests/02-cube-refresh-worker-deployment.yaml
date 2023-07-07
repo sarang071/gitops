@@ -29,7 +29,7 @@ spec:
             - name: CUBEJS_REDIS_URL
               value: redis://redis:6379 
             - name: CUBEJS_DB_HOST
-              value: sarang.mysql.database.azure.com
+              value: cubejs.mysql.database.azure.com
             - name: CUBEJS_DB_NAME
               value: "cubejs"
             - name: CUBEJS_DB_USER
