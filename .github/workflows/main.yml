@@ -30,7 +30,15 @@ jobs:
           build-args: |
             version=${{ steps.tag.outputs.tag }}
           tags: ${{ secrets.ACR_ENDPOINT }}/${{ env.IMAGE_NAME }}:${{ github.run_attempt }}
-      -
-        name: AZ Login
-        uses: azure/login@v1
-        run: az login -u 5c023096-5c14-43b1-acae-f0f22f115f56 -p grY8Q~PDZ71PaveGw448ZbKhGzCHvja4x~Jtla5E
+     
+      - uses: azure/login@v1
+        with:
+          client-id: 5c023096-5c14-43b1-acae-f0f22f115f56
+          tenant-id: a787b852-29bf-4164-add5-7d55cac58f45
+          subscription-id: 0db1b169-34da-432c-98d4-2db3188443a7
+  
+      - name: 'Run Azure CLI commands'
+        run: |
+          az account show
+          az group list
+          pwd 
