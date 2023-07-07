@@ -14,6 +14,6 @@ COPY . .
 
 FROM scratch
 
-COPY --from=builder /app/departments-api /
+# COPY --from=builder /app/departments-api /
 
 ENTRYPOINT [ "/departments-api" ]
