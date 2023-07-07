@@ -55,6 +55,6 @@ jobs:
         uses: Azure/k8s-deploy@v4
         with:
           namespace: 'default'
-          manifests: gitops/cubejs-manifests/
+          manifests: cubejs-manifests/
           # images: '${{ secrets.registry }}.azurecr.io/${{ secrets.repository }}/azure-vote-front:${{ github.sha }}'
           # pull-images: false
